@@ -1,0 +1,368 @@
+/* ============================================================
+   ② CSS — 追加CSS（外観 > カスタマイズ > 追加CSS に貼り付け）
+   既存テーマのクラス（.btn_01, .ttl_01, .inner 等）はそのまま使用。
+   .fc- プレフィックスで新規追加スタイルを管理し競合を防いでいます。
+   ============================================================ */
+
+/* ---------- 全体ラッパー ---------- */
+.fc-wrap {
+  width: 100%;
+}
+
+/* ---------- セクション共通 ---------- */
+.fc-sec {
+  padding: 50px 0;
+}
+.fc-sec:nth-child(even) {
+  background: #f5f5f0;
+}
+
+.fc-sec-lead {
+  text-align: center;
+  color: #555;
+  font-size: .9rem;
+  line-height: 1.85;
+  margin-bottom: 2rem;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---------- 既存テーマの ttl_01 を補完（定義されていない場合の保険） ---------- */
+.fc-wrap .ttl_01 {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  font-weight: 700;
+  line-height: 1.35;
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: .04em;
+}
+.fc-wrap .ttl_01 span {
+  display: block;
+  font-size: clamp(.68rem, 1.4vw, .85rem);
+  font-weight: 700;
+  color: #667744;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  margin-top: .3em;
+}
+
+/* ---------- 小見出し ---------- */
+.fc-ttl2 {
+  font-size: 1rem;
+  font-weight: 700;
+  border-left: 4px solid #667744;
+  padding-left: .75rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.4;
+}
+.fc-ttl2-sub {
+  font-size: .82em;
+  font-weight: 400;
+  color: #666;
+  margin-left: .4em;
+}
+.fc-mt { margin-top: 2.5rem; }
+
+/* ---------- ボタン（既存 .btn_01 を補完） ---------- */
+.fc-btn-sm {
+  font-size: .8rem !important;
+  padding: .5em 1em !important;
+}
+.fc-btn-outline {
+  background: transparent !important;
+  border: 2px solid #667744 !important;
+  color: #667744 !important;
+}
+.fc-btn-outline::after {
+  border-color: #667744 !important;
+}
+.fc-btn-outline:hover {
+  background: #f0f2ec !important;
+}
+
+/* ---------- お知らせボックス ---------- */
+.fc-notice-sec {
+  padding: 20px 0;
+  background: #fff8f8 !important;
+}
+.fc-notice-box {
+  border: 2px solid #c0392b;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.fc-notice-tag {
+  background: #c0392b;
+  color: #fff;
+  font-size: .8rem;
+  font-weight: 700;
+  padding: .4em 1em;
+  letter-spacing: .06em;
+}
+.fc-notice-body {
+  padding: 1rem 1.25rem;
+  font-size: .875rem;
+  line-height: 1.8;
+}
+.fc-notice-body a {
+  color: #667744;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.fc-mt-s { margin-top: .5rem; }
+
+/* ---------- カードグリッド ---------- */
+.fc-card-grid {
+  display: grid;
+  gap: 20px;
+}
+.fc-grid-3 { grid-template-columns: repeat(3, 1fr); }
+.fc-grid-2 { grid-template-columns: repeat(2, 1fr); }
+
+/* ---------- サービスカード（配送・サプリ） ---------- */
+.fc-service-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow .22s ease;
+}
+.fc-service-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,.1);
+}
+.fc-service-card--featured {
+  border-color: #667744;
+}
+
+.fc-card-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #f5f5f0;
+}
+.fc-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.fc-card-title {
+  font-size: .9rem;
+  font-weight: 700;
+  padding: .75rem 1rem .4rem;
+  line-height: 1.4;
+  border-bottom: 1px solid #eee;
+  margin: 0;
+}
+.fc-card-body {
+  padding: .7rem 1rem;
+  font-size: .8rem;
+  color: #555;
+  line-height: 1.7;
+  flex: 1;
+}
+.fc-food-list {
+  margin-top: .4rem;
+  color: #667744;
+  font-size: .75rem;
+  font-weight: 700;
+}
+.fc-card-btns {
+  padding: .75rem 1rem 1rem;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.fc-card-btns .btn_01 {
+  flex: 1;
+  text-align: center;
+  min-width: 0;
+}
+
+/* ---------- フードカード（クリッカブル） ---------- */
+.fc-food-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #ddd;
+  color: #191919;
+  text-decoration: none;
+  transition: box-shadow .22s ease, transform .22s ease;
+}
+.fc-food-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,.1);
+  transform: translateY(-2px);
+  opacity: 1;
+  color: #191919;
+  text-decoration: none;
+}
+.fc-food-card__title {
+  font-size: .88rem;
+  font-weight: 700;
+  padding: .7rem 1rem .3rem;
+  line-height: 1.4;
+  margin: 0;
+}
+.fc-food-card__text {
+  font-size: .78rem;
+  color: #666;
+  padding: .2rem 1rem .9rem;
+  line-height: 1.65;
+  flex: 1;
+  margin: 0;
+}
+
+/* ---------- 参考リンク ---------- */
+.fc-reference {
+  margin-top: 2rem;
+}
+.fc-reference a {
+  display: block;
+  border: 1px solid #ddd;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow .22s ease;
+}
+.fc-reference a:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,.1);
+}
+.fc-reference__inner {
+  display: flex;
+  align-items: center;
+}
+.fc-reference__img {
+  flex-shrink: 0;
+  width: 200px;
+  overflow: hidden;
+}
+.fc-reference__img img {
+  width: 100%;
+  height: 60px;
+  object-fit: cover;
+  display: block;
+}
+.fc-reference__text {
+  padding: .75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .85rem;
+  flex-wrap: wrap;
+}
+.fc-reference__label { color: #999; }
+.fc-reference__name  { font-weight: 700; }
+.fc-reference__arrow { color: #667744; margin-left: auto; font-size: 1.2rem; }
+
+/* ---------- ケア用品グリッド ---------- */
+.fc-care-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.fc-care-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 1.5rem 1.25rem;
+  transition: box-shadow .22s ease;
+}
+.fc-care-item:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,.1);
+}
+.fc-care-icon {
+  font-size: 2rem;
+  margin-bottom: .75rem;
+}
+.fc-care-title {
+  font-size: .95rem;
+  font-weight: 700;
+  margin-bottom: .75rem;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid #eee;
+}
+.fc-care-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 .75rem;
+  font-size: .8rem;
+  color: #555;
+  line-height: 1.7;
+}
+.fc-care-list li {
+  padding-left: .9rem;
+  position: relative;
+  margin-bottom: .2rem;
+}
+.fc-care-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #667744;
+}
+.fc-care-brand {
+  font-size: .72rem;
+  color: #888;
+  background: #f5f5f0;
+  padding: .3em .6em;
+  display: inline-block;
+  border-radius: 3px;
+  margin: 0;
+}
+
+/* ---------- ピックアップ ---------- */
+.fc-pickup-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.fc-pickup-list li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70px;
+  background: #f0f2ec;
+  border: 1px solid rgba(102,119,68,.25);
+  padding: 1rem .8rem;
+  text-align: center;
+  font-size: .82rem;
+  font-weight: 700;
+  color: #667744;
+  text-decoration: none;
+  transition: background .22s ease, box-shadow .22s ease;
+}
+.fc-pickup-list li a:hover {
+  background: #e3e8d8;
+  box-shadow: 0 2px 8px rgba(0,0,0,.1);
+}
+
+/* ============================================================
+   レスポンシブ — タブレット（〜 900px）
+   ============================================================ */
+@media screen and (max-width: 900px) {
+  .fc-grid-3     { grid-template-columns: repeat(2, 1fr); }
+  .fc-care-grid  { grid-template-columns: repeat(2, 1fr); }
+  .fc-pickup-list { grid-template-columns: repeat(2, 1fr); }
+  .fc-reference__img { width: 130px; }
+}
+
+/* ============================================================
+   レスポンシブ — スマートフォン（〜 640px）
+   ============================================================ */
+@media screen and (max-width: 640px) {
+  .fc-sec { padding: 36px 0; }
+
+  .fc-grid-3,
+  .fc-grid-2     { grid-template-columns: 1fr; }
+  .fc-care-grid  { grid-template-columns: 1fr; }
+  .fc-pickup-list { grid-template-columns: repeat(2, 1fr); }
+
+  .fc-reference__inner  { flex-direction: column; }
+  .fc-reference__img    { width: 100%; }
+  .fc-reference__img img { height: 56px; }
+
+  .fc-card-btns { flex-direction: column; }
+  .fc-card-btns .btn_01 { width: 100%; }
+}
