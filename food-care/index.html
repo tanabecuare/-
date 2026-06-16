@@ -1,859 +1,521 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>フード＆ケア用品 | 動物病院 京都</title>
-  <meta name="description" content="動物病院 京都が取り扱うペットフード・ケア用品のご案内です。獣医師が選んだ療法食・サプリメント・デンタルケア用品などを取り揃えています。">
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>フード＆ケア用品 | 動物病院 京都（京都市北区の動物病院）</title>
+<meta name="description" content="動物病院 京都が取り扱うペットフード・ケア用品のご案内。療法食・サプリメント・デンタルケア用品など、獣医師が選んだアイテムをご提供しています。">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <!-- ========== HEADER ========== -->
-  <header class="site-header">
-    <div class="header-inner">
-      <div class="header-logo">
-        <a href="/" aria-label="動物病院 京都 トップページへ">
-          <div class="logo-mark">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <circle cx="20" cy="20" r="19" stroke="#4a8c6e" stroke-width="2"/>
-              <path d="M10 22c0-5.5 4-10 10-10s10 4.5 10 10" stroke="#4a8c6e" stroke-width="2" stroke-linecap="round"/>
-              <circle cx="15" cy="17" r="2" fill="#4a8c6e"/>
-              <circle cx="25" cy="17" r="2" fill="#4a8c6e"/>
-              <path d="M16 25c1 1.5 2.5 2 4 2s3-0.5 4-2" stroke="#4a8c6e" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <div class="logo-text">
+<!-- ========== FIXED BUTTONS ========== -->
+<div class="fixed_reserve">
+  <a href="https://animal-kyoto.jp/reserve">診療予約</a>
+</div>
+
+<!-- ========== HEADER (PC) ========== -->
+<header id="header">
+  <nav class="sp-no01">
+    <div class="nav-inner">
+      <div class="flex">
+        <h1 class="h-logo">
+          <a href="https://animal-kyoto.jp/">
+            <span class="logo-text-wrap">
+              <span class="logo-ja">動物病院 京都</span>
+              <span class="logo-en">Animal Hospital Kyoto</span>
+            </span>
+          </a>
+        </h1>
+        <div class="rBox">
+          <div class="recruit"><a href="https://animal47.jp/" target="_blank">採用サイト</a></div>
+          <div class="line"><a href="https://line.me/R/ti/p/%40641hrtod" target="_blank">LINE予約</a></div>
+        </div>
+      </div>
+      <div class="navi">
+        <ul>
+          <li class="h_link"><a href="https://animal-kyoto.jp/information">病院案内</a></li>
+          <li class="h_link"><a href="https://animal-kyoto.jp/medical">診療案内</a></li>
+          <li class="h_link"><a href="https://animal-kyoto.jp/information/staff">スタッフ</a></li>
+          <li class="h_link"><a href="https://animal-kyoto.jp/trimming-salon">トリミング</a></li>
+          <li class="h_link"><a href="https://animal-kyoto.jp/hotel">ペットホテル</a></li>
+          <li class="h_link h_link--current"><a href="#">フード・ケア用品</a></li>
+          <li class="h_link"><a href="https://animal-kyoto.jp/blog">ブログ</a></li>
+          <li class="h_link"><a href="https://animal-kyoto.jp/access">アクセス</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HEADER (SP) ========== -->
+  <div class="pc-no01">
+    <div class="fl01">
+      <h1 class="h-logo">
+        <a href="https://animal-kyoto.jp/">
+          <span class="logo-text-wrap">
             <span class="logo-ja">動物病院 京都</span>
             <span class="logo-en">Animal Hospital Kyoto</span>
+          </span>
+        </a>
+      </h1>
+      <div class="sp-recruit"><a href="https://animal47.jp/" target="_blank">採用サイト</a></div>
+    </div>
+    <div class="overlay"></div>
+    <div id="hb-menu"><div class="hb-inner"><span></span><span></span><span></span></div></div>
+    <nav class="sp-g-nav">
+      <div class="g-nav-inner">
+        <ul class="left">
+          <li><a href="https://animal-kyoto.jp/information">病院案内</a></li>
+          <li><a href="https://animal-kyoto.jp/medical">診療案内</a></li>
+          <li><a href="https://animal-kyoto.jp/information/staff">スタッフ</a></li>
+          <li><a href="https://animal-kyoto.jp/trimming-salon">トリミング</a></li>
+          <li><a href="https://animal-kyoto.jp/hotel">ペットホテル</a></li>
+          <li><a href="#">フード・ケア用品</a></li>
+          <li><a href="https://animal-kyoto.jp/blog">ブログ</a></li>
+          <li><a href="https://animal-kyoto.jp/access">アクセス</a></li>
+          <li><a href="https://animal-kyoto.jp/contact">お問合せ</a></li>
+          <li><a href="https://animal-kyoto.jp/reserve">LINE予約</a></li>
+        </ul>
+        <div class="tel_box">
+          <a href="tel:075-465-3330">
+            <i class="fas fa-phone"></i>
+            <p class="txt">075-465-3330</p>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- ========== UNDER PAGE WRAP ========== -->
+<div id="under">
+
+  <!-- パンくずリスト -->
+  <div class="breadcrumb">
+    <ul>
+      <li><a href="https://animal-kyoto.jp/">HOME</a></li>
+      <li>フード＆ケア用品</li>
+    </ul>
+  </div>
+
+  <!-- ページタイトル -->
+  <div class="under-ttl">
+    <div class="inner">
+      <h2 class="ttl_01">フード＆ケア用品<br><span>Food &amp; Care</span></h2>
+    </div>
+  </div>
+
+  <!-- ========== 重要なお知らせ ========== -->
+  <section class="sec notice-sec">
+    <div class="inner">
+      <div class="notice-box">
+        <div class="notice-tag">重要なお知らせ</div>
+        <div class="notice-body">
+          <p>ヒルズ『サイエンス・ダイエット〈プロ〉』シリーズ製品は、新ブランド「ベット・エッセンシャル」にリニューアルします。<br>
+          「ベット・エッセンシャル」のご購入については、ヒルズ公式通販サイト「<a href="https://myhillsshop.hills.co.jp/" target="_blank">マイヒルズショップ</a>」からご購入いただけます。また、当院でも一部商品をご購入いただけます。</p>
+          <p class="u-mt-s">※ヒルズ サイエンスダイエット〈プロ〉製品は、メーカー在庫がなくなり次第、販売終了となります。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ペットフード配送サービス ========== -->
+  <section class="sec sec-delivery">
+    <div class="inner">
+      <h3 class="ttl_01">ペットフード配送サービス<br><span>Home Delivery Service</span></h3>
+
+      <div class="card-grid card-grid--3col">
+
+        <div class="service-card">
+          <div class="service-card__img">
+            <div class="img-ph">ロイヤルカナン<br>ベッツホームデリバリー</div>
+          </div>
+          <p class="service-card__title">ロイヤルカナン ベッツホームデリバリー 公式オンラインストア</p>
+          <div class="service-card__body">
+            <p>登録には病院ごとのコードが必要です。一度ご来院ください。</p>
+            <p class="food-list">マルチファンクション、モノファンクション、ベッツプランシリーズ</p>
+          </div>
+          <div class="service-card__btns">
+            <a class="btn_01 btn_01--sm" href="https://vet.royalcanin.jp/" target="_blank">サービス説明</a>
+            <a class="btn_01 btn_01--sm btn_01--outline" href="https://vet.royalcanin.jp/login" target="_blank">ログインページ</a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__img">
+            <div class="img-ph">PURINA PRO PLAN<br>VETERINARY DIETS</div>
+          </div>
+          <p class="service-card__title">PURINA PRO PLAN VETERINARY DIETS</p>
+          <div class="service-card__body">
+            <p>登録には病院ごとのコードが必要です。一度ご来院ください。</p>
+            <p class="food-list">プロプラン ベテリナリーダイエットシリーズ</p>
+          </div>
+          <div class="service-card__btns">
+            <a class="btn_01 btn_01--sm" href="https://nestle.jp/brand/purina/proplanveterinarydiets/" target="_blank">サービス説明</a>
+            <a class="btn_01 btn_01--sm btn_01--outline" href="https://vets.nestle.jp/owner/order/code/" target="_blank">ログインページ</a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__img">
+            <div class="img-ph">VETERINARY HPM</div>
+          </div>
+          <p class="service-card__title">VETERINARY HPM</p>
+          <div class="service-card__body">
+            <p>登録には病院ごとのコードが必要です。一度ご来院ください。</p>
+            <p class="food-list">ベテリナリーHPMシリーズ</p>
+          </div>
+          <div class="service-card__btns">
+            <a class="btn_01 btn_01--sm" href="http://www.virbac.jp/product/food/hpm_concept/index.html" target="_blank">サービス説明</a>
+            <a class="btn_01 btn_01--sm btn_01--outline" href="https://www.virbac-hpm.jp/my-account" target="_blank">ログインページ</a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__img">
+            <div class="img-ph">どうぶつ病院<br>宅配便</div>
+          </div>
+          <p class="service-card__title">どうぶつ病院 宅配便</p>
+          <div class="service-card__body">
+            <p>登録には病院ごとのコードが必要です。一度ご来院ください。</p>
+            <p class="food-list">ドクターズシリーズ</p>
+          </div>
+          <div class="service-card__btns">
+            <a class="btn_01 btn_01--sm" href="https://drs.nosan.co.jp/shop/default.aspx" target="_blank">サービス説明</a>
+            <a class="btn_01 btn_01--sm btn_01--outline" href="https://drs.nosan.co.jp/shop/customer/menu.aspx" target="_blank">ログインページ</a>
+          </div>
+        </div>
+
+        <div class="service-card service-card--featured">
+          <div class="service-card__img">
+            <div class="img-ph img-ph--featured">動物病院 京都<br>フードストア</div>
+          </div>
+          <p class="service-card__title">動物病院 京都 フードストア</p>
+          <div class="service-card__body">
+            <p>フードを自宅まで宅配してほしい、24時間いつでも注文したい、安心して療法食を利用したい、そんなご要望にお応えします。</p>
+          </div>
+          <div class="service-card__btns">
+            <a class="btn_01 btn_01--sm" href="#">サービス説明</a>
+            <a class="btn_01 btn_01--sm btn_01--outline" href="#" target="_blank">ログインページ</a>
+          </div>
+        </div>
+
+      </div><!-- /card-grid -->
+    </div>
+  </section>
+
+  <!-- ========== 主要な取扱いペットフード ========== -->
+  <section class="sec sec-food">
+    <div class="inner">
+      <h3 class="ttl_01">主要な取扱いペットフード<br><span>Pet Food Lineup</span></h3>
+
+      <!-- 療法食 -->
+      <h4 class="ttl_02">療法食<span class="ttl_02-sub">（獣医師の処方が必要）</span></h4>
+      <div class="card-grid card-grid--3col">
+
+        <a class="food-card" href="https://www.hills.co.jp/prescription-diet" target="_blank">
+          <div class="food-card__img">
+            <div class="img-ph">ヒルズ<br>プリスクリプション・ダイエット</div>
+          </div>
+          <p class="food-card__title">ヒルズ プリスクリプション・ダイエット</p>
+          <p class="food-card__text">ペットの健康と長生きのために栄養と品質にこだわった特別療法食です。</p>
+        </a>
+
+        <a class="food-card" href="https://www.royalcanin.co.jp/" target="_blank">
+          <div class="food-card__img">
+            <div class="img-ph">ロイヤルカナン<br>ベテリナリーダイエット</div>
+          </div>
+          <p class="food-card__title">ロイヤルカナン<br>ベテリナリーダイエット / マルチファンクション / モノファンクション</p>
+          <p class="food-card__text">世界共通の徹底した品質・安全管理体制のもとで作られた質の高い療法食です。</p>
+        </a>
+
+        <a class="food-card" href="https://jp-dietics.jp/" target="_blank">
+          <div class="food-card__img">
+            <div class="img-ph">JPスタイル<br>ダイエティクス</div>
+          </div>
+          <p class="food-card__title">JPスタイル ダイエティクス</p>
+          <p class="food-card__text">日本の飼育環境下で発生しやすい疾病に合わせてつくられた国産の療法食です。</p>
+        </a>
+
+        <a class="food-card" href="https://www.msd-animal-health.jp/" target="_blank">
+          <div class="food-card__img">
+            <div class="img-ph">スペシフィック</div>
+          </div>
+          <p class="food-card__title">スペシフィック</p>
+          <p class="food-card__text">北欧産の原材料にこだわった自然派ヘルシー療法食です。</p>
+        </a>
+
+      </div><!-- /療法食 -->
+
+      <!-- 総合栄養食 -->
+      <h4 class="ttl_02 u-mt">総合栄養食</h4>
+      <div class="card-grid card-grid--3col">
+
+        <a class="food-card" href="https://www.hills.co.jp/science-diet-pro" target="_blank">
+          <div class="food-card__img">
+            <div class="img-ph">ヒルズ<br>サイエンスダイエット〈プロ〉</div>
+          </div>
+          <p class="food-card__title">ヒルズ サイエンスダイエット〈プロ〉</p>
+          <p class="food-card__text">ペットの健康と長生きのために栄養と品質にこだわったペットフードです。</p>
+        </a>
+
+        <a class="food-card" href="https://www.royalcanin.co.jp/" target="_blank">
+          <div class="food-card__img">
+            <div class="img-ph">ロイヤルカナン<br>ベッツプラン</div>
+          </div>
+          <p class="food-card__title">ロイヤルカナン ベッツプラン</p>
+          <p class="food-card__text">世界共通の徹底した品質・安全管理体制のもとで作られた質の高いペットフードです。</p>
+        </a>
+
+        <a class="food-card" href="http://www.biljac.jp/" target="_blank">
+          <div class="food-card__img">
+            <div class="img-ph">ビルジャック<br>フード</div>
+          </div>
+          <p class="food-card__title">ビルジャックフード</p>
+          <p class="food-card__text">脂肪無添加の消化吸収に良いドッグフードです。</p>
+        </a>
+
+        <a class="food-card" href="https://www.elancopet.jp/" target="_blank">
+          <div class="food-card__img">
+            <div class="img-ph">ドクターズ<br>ダイエット</div>
+          </div>
+          <p class="food-card__title">ドクターズダイエット</p>
+          <p class="food-card__text">日本の犬・猫の嗜好に合わせてつくられている国産ペットフードです。</p>
+        </a>
+
+      </div><!-- /総合栄養食 -->
+
+      <!-- 参考リンク -->
+      <div class="reference-block">
+        <a href="https://www.royalcanin.co.jp/dictionary/" target="_blank">
+          <div class="reference-inner">
+            <div class="reference-img">
+              <div class="img-ph img-ph--ref">犬と猫の栄養成分辞典</div>
+            </div>
+            <div class="reference-text">
+              <span class="reference-label">参考リンク）</span>
+              <span class="reference-name">犬と猫の栄養成分辞典</span>
+              <span class="reference-arrow"><i class="fas fa-chevron-right"></i></span>
+            </div>
           </div>
         </a>
       </div>
 
-      <button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="globalNav">
-        <span></span><span></span><span></span>
-      </button>
+    </div>
+  </section>
 
-      <nav class="global-nav" id="globalNav" aria-label="グローバルナビゲーション">
-        <ul class="nav-list">
-          <li><a href="#">病院案内</a></li>
-          <li><a href="#">診療案内</a></li>
-          <li><a href="#">各院のご案内</a></li>
-          <li class="nav-current"><a href="#" aria-current="page">フード・ケア用品</a></li>
-          <li><a href="#">よくある質問</a></li>
-          <li><a href="#" class="nav-contact">お問い合わせ</a></li>
+  <!-- ========== サプリメント ========== -->
+  <section class="sec sec-supplement">
+    <div class="inner">
+      <h3 class="ttl_01">サプリメント<br><span>Supplements</span></h3>
+
+      <div class="card-grid card-grid--2col">
+
+        <div class="service-card">
+          <div class="service-card__img">
+            <div class="img-ph">Vetz Petz<br>アンチノールプラス</div>
+          </div>
+          <p class="service-card__title">Vetz Petz アンチノールプラス</p>
+          <div class="service-card__body">
+            <p>犬・猫の関節、皮膚・被毛、心血管、腎臓の健康維持をサポートします。病院にて発行している動物病院コードを入力いただくとおトクです。</p>
+            <p class="food-list">アンチノールプラス</p>
+          </div>
+          <div class="service-card__btns">
+            <a class="btn_01 btn_01--sm" href="https://www.vetzpetz.jp/" target="_blank">サービス説明</a>
+            <a class="btn_01 btn_01--sm btn_01--outline" href="https://www.vetzpetz.jp/shop/mypage/login.php" target="_blank">ログインページ</a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__img">
+            <div class="img-ph">HACHI<br>アニミューン</div>
+          </div>
+          <p class="service-card__title">HACHI アニミューン</p>
+          <div class="service-card__body">
+            <p>アニミューン®に含まれる糖鎖「TPG-1」は、6種類の糖と17種類のアミノ酸からなる「多糖タンパク質」。体を内側から守り健康を維持することで、動物本来の免疫力を維持します。</p>
+            <p class="food-list">アニミューン</p>
+          </div>
+          <div class="service-card__btns">
+            <a class="btn_01 btn_01--sm" href="https://animmune.jp/" target="_blank">サービス説明</a>
+            <a class="btn_01 btn_01--sm btn_01--outline" href="https://animmune.jp/mypage/" target="_blank">ログインページ</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ケア用品 ========== -->
+  <section class="sec sec-care">
+    <div class="inner">
+      <h3 class="ttl_01">ケア用品<br><span>Care Products</span></h3>
+      <p class="sec-lead">獣医師・動物看護師が厳選したケア用品を院内にてご提供しています。使い方がわからない場合はスタッフへお気軽にご相談ください。</p>
+
+      <div class="care-grid">
+
+        <div class="care-item">
+          <div class="care-item__icon"><i class="fas fa-tooth"></i></div>
+          <h4 class="care-item__title">デンタルケア</h4>
+          <ul class="care-item__list">
+            <li>歯磨きジェル・歯磨き粉</li>
+            <li>歯ブラシ・フィンガーブラシ</li>
+            <li>デンタルスプレー・洗口液</li>
+            <li>デンタルガム・デンタルシート</li>
+          </ul>
+          <p class="care-item__brand">Virbac C.E.T. / O.R.A.vet など</p>
+        </div>
+
+        <div class="care-item">
+          <div class="care-item__icon"><i class="fas fa-soap"></i></div>
+          <h4 class="care-item__title">スキン・被毛ケア</h4>
+          <ul class="care-item__list">
+            <li>低刺激シャンプー・コンディショナー</li>
+            <li>皮膚用スプレー・クリーム</li>
+            <li>薬用シャンプー（処方品）</li>
+            <li>CUaRE BioMedical シリーズ</li>
+          </ul>
+          <p class="care-item__brand">Virbac Episoothe / Douxo S3 など</p>
+        </div>
+
+        <div class="care-item">
+          <div class="care-item__icon"><i class="fas fa-ear-listen"></i></div>
+          <h4 class="care-item__title">イヤーケア</h4>
+          <ul class="care-item__list">
+            <li>耳洗浄液（イヤークリーナー）</li>
+            <li>耳掃除用コットン・ガーゼ</li>
+            <li>耳毛処理パウダー</li>
+          </ul>
+          <p class="care-item__brand">Virbac Epiotic / MalAcetic Otic など</p>
+        </div>
+
+        <div class="care-item">
+          <div class="care-item__icon"><i class="fas fa-eye"></i></div>
+          <h4 class="care-item__title">アイケア</h4>
+          <ul class="care-item__list">
+            <li>点眼液（人工涙液タイプ）</li>
+            <li>アイウォッシュ</li>
+            <li>アイクリーナーシート</li>
+          </ul>
+          <p class="care-item__brand">I-DROP / Optixcare など</p>
+        </div>
+
+        <div class="care-item">
+          <div class="care-item__icon"><i class="fas fa-paw"></i></div>
+          <h4 class="care-item__title">爪・肉球ケア</h4>
+          <ul class="care-item__list">
+            <li>爪切り（ギロチン型・ハサミ型）</li>
+            <li>止血パウダー</li>
+            <li>肉球クリーム・バーム</li>
+          </ul>
+          <p class="care-item__brand">Millers Forge / Musher's Secret など</p>
+        </div>
+
+        <div class="care-item">
+          <div class="care-item__icon"><i class="fas fa-box-open"></i></div>
+          <h4 class="care-item__title">その他のケア用品</h4>
+          <ul class="care-item__list">
+            <li>エリザベスカラー・術後服</li>
+            <li>経口補水液・流動食</li>
+            <li>消毒液・傷ケア用品</li>
+          </ul>
+          <p class="care-item__brand">各種メーカー取扱</p>
+        </div>
+
+      </div><!-- /care-grid -->
+    </div>
+  </section>
+
+  <!-- ========== ピックアップ ========== -->
+  <section class="sec sec-pickup">
+    <div class="inner">
+      <h3 class="ttl_01">ピックアップ<br><span>Pick Up</span></h3>
+      <ul class="pickup-list">
+        <li><a href="https://animal-kyoto.jp/trimming-salon"><div class="pickup-bnr">トリミングサロン</div></a></li>
+        <li><a href="https://animal-kyoto.jp/hotel"><div class="pickup-bnr">ペットホテル</div></a></li>
+        <li><a href="https://animal-kyoto.jp/medical/prevention"><div class="pickup-bnr">予防・去勢・避妊</div></a></li>
+        <li><a href="https://animal-kyoto.jp/checkup"><div class="pickup-bnr">健康診断</div></a></li>
+      </ul>
+    </div>
+  </section>
+
+</div><!-- /under -->
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="inner">
+    <div class="contact_area pc-only">
+      <a href="tel:075-465-3330" class="btn_01 btn-tel">
+        電話でのお問い合せ<br>
+        <span class="txt_01">075-465-3330</span><br>
+        <span class="txt_02">by phone</span>
+      </a>
+      <div class="btn_02">
+        <p>お問い合わせ<br>フォーム<br><span class="txt_02">CONTACT FORM</span></p>
+        <div class="btn_03">
+          <a href="https://animal-kyoto.jp/contact">飼い主様</a>
+          <a href="https://animal-kyoto.jp/media">メディア関係者様</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="under">
+      <div class="left">
+        <span class="f_logo_text">動物病院 京都</span>
+        <ul>
+          <li>〒603-8326 京都府京都市北区北野下白梅町44-1 Cassiaビル1F</li>
+          <li>電話：075-465-3330</li>
+          <li>診療時間：9:00 - 12:00 / 16:30 - 19:30（年中無休）</li>
         </ul>
-      </nav>
-    </div>
-  </header>
-
-  <!-- ========== PAGE HERO ========== -->
-  <section class="page-hero">
-    <div class="page-hero-inner">
-      <div class="breadcrumb" aria-label="パンくずリスト">
-        <ol>
-          <li><a href="/">ホーム</a></li>
-          <li aria-current="page">フード＆ケア用品</li>
-        </ol>
       </div>
-      <h1 class="page-title">
-        <span class="page-title-en">Food &amp; Care</span>
-        フード＆ケア用品
-      </h1>
-      <p class="page-lead">獣医師が選んだ、大切なペットのための<br class="sp-only">フードとケア用品をご提供しています。</p>
-    </div>
-  </section>
-
-  <!-- ========== INTRO ========== -->
-  <section class="intro-section">
-    <div class="container">
-      <div class="intro-text">
-        <p>動物病院 京都では、診療の延長として、ご自宅でのケアをサポートするため、獣医師・動物看護師が厳選したフードとケア用品を取り扱っています。<br>
-        療法食・サプリメント・デンタルケア・スキンケアなど、日常のヘルスケアに役立つ商品をご用意しています。</p>
+      <div class="right">
+        <ul>
+          <li><a href="https://animal-kyoto.jp/">HOME</a></li>
+          <li><a href="https://animal-kyoto.jp/news">お知らせ</a></li>
+          <li><a href="https://animal-kyoto.jp/information">病院案内</a></li>
+          <li><a href="https://animal-kyoto.jp/medical">診療案内</a></li>
+          <li><a href="https://animal-kyoto.jp/hotel">ペットホテル</a></li>
+          <li><a href="https://animal-kyoto.jp/blog">ブログ</a></li>
+          <li><a href="https://animal-kyoto.jp/privacy">プライバシー</a></li>
+        </ul>
       </div>
     </div>
-  </section>
-
-  <!-- ========== TAB NAVIGATION ========== -->
-  <div class="tab-section">
-    <div class="container">
-      <div class="tab-nav" role="tablist" aria-label="カテゴリ選択">
-        <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-food" id="tab-food" data-tab="food">
-          <span class="tab-icon">
-            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M14 4C8.5 4 4 8.5 4 14s4.5 10 10 10 10-4.5 10-10S19.5 4 14 4z" stroke="currentColor" stroke-width="1.5"/>
-              <path d="M9 13h10M14 8v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-          </span>
-          フードストア
-        </button>
-        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-care" id="tab-care" data-tab="care">
-          <span class="tab-icon">
-            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M14 5C9 5 5 9 5 14c0 3 1.5 5.5 3.8 7.1L14 23l5.2-1.9C21.5 19.5 23 17 23 14c0-5-4-9-9-9z" stroke="currentColor" stroke-width="1.5"/>
-              <path d="M10 14c0 2.2 1.8 4 4 4s4-1.8 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-          </span>
-          ケアストア
-        </button>
-      </div>
-    </div>
+    <p class="copy">© Animal Hospital Kyoto all rights reserved.</p>
   </div>
+</footer>
 
-  <!-- ========== FOOD STORE PANEL ========== -->
-  <section class="tab-panel active" id="panel-food" role="tabpanel" aria-labelledby="tab-food">
+<!-- ========== SP FIXED BOTTOM BAR ========== -->
+<div class="sp-only sp-btn-area">
+  <ul>
+    <li class="list01 btn-phone">
+      <a href="tel:075-465-3330">
+        <i class="fas fa-phone"></i>
+        <p>電話予約</p>
+      </a>
+    </li>
+    <li class="list02 btn-line">
+      <a href="https://line.me/R/ti/p/%40641hrtod">
+        <i class="fab fa-line"></i>
+        <p>LINE予約</p>
+      </a>
+    </li>
+    <li class="list01">
+      <a href="https://animal-kyoto.jp/access">
+        <i class="fas fa-map-marker-alt"></i>
+        <p>アクセス</p>
+      </a>
+    </li>
+    <li class="list02">
+      <a href="https://animal-kyoto.jp/information/schedule">
+        <i class="fas fa-calendar-alt"></i>
+        <p>勤務表</p>
+      </a>
+    </li>
+  </ul>
+</div>
 
-    <!-- フードストア紹介 -->
-    <div class="store-intro store-intro--food">
-      <div class="container">
-        <div class="store-intro-grid">
-          <div class="store-intro-img">
-            <div class="img-placeholder img-placeholder--food">
-              <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <rect x="10" y="30" width="60" height="38" rx="4" stroke="#4a8c6e" stroke-width="2"/>
-                <path d="M20 30V22a20 20 0 0 1 40 0v8" stroke="#4a8c6e" stroke-width="2" stroke-linecap="round"/>
-                <circle cx="40" cy="49" r="8" stroke="#4a8c6e" stroke-width="2"/>
-                <path d="M37 49h6M40 46v6" stroke="#4a8c6e" stroke-width="1.5" stroke-linecap="round"/>
-              </svg>
-              <p>フードストア</p>
-            </div>
-          </div>
-          <div class="store-intro-body">
-            <h2 class="store-title">
-              <span class="store-title-en">Food Store</span>
-              フードストア
-            </h2>
-            <p class="store-description">ご自宅まで宅配でお届けする、オンラインフードサービスです。<br>
-            療法食・処方食はもちろん、一般フードや栄養補助食品まで幅広く取り扱っています。<br>
-            獣医師がカルテをもとに適切な商品をご提案しますので、安心してご利用いただけます。</p>
-            <div class="store-badges">
-              <span class="badge">宅配対応</span>
-              <span class="badge">24時間注文可</span>
-              <span class="badge">療法食取扱</span>
-              <span class="badge">定期購入あり</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- フードストア特徴 -->
-    <div class="features-section">
-      <div class="container">
-        <h3 class="section-heading">フードストアの特長</h3>
-        <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon feature-icon--1">
-              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <circle cx="22" cy="22" r="20" fill="#e8f4ef"/>
-                <path d="M14 28l6-8 4 5 3-4 5 7H14z" stroke="#4a8c6e" stroke-width="1.5" stroke-linejoin="round" fill="none"/>
-                <path d="M30 16l3 3-10 10" stroke="#4a8c6e" stroke-width="1.5" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h4 class="feature-title">ご自宅へお届け</h4>
-            <p class="feature-text">ご注文いただいたフードは、ご自宅まで宅配便でお届けします。重いフードを持ち帰る手間がありません。平日12時までのご注文で最短翌日配送。</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon feature-icon--2">
-              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <circle cx="22" cy="22" r="20" fill="#e8f4ef"/>
-                <circle cx="22" cy="22" r="10" stroke="#4a8c6e" stroke-width="1.5"/>
-                <path d="M22 14v8l5 3" stroke="#4a8c6e" stroke-width="1.5" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h4 class="feature-title">24時間いつでも注文</h4>
-            <p class="feature-text">オンラインショップは24時間ご利用可能です。診察時間外でも、深夜でも、お好きなタイミングでご注文いただけます。</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon feature-icon--3">
-              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <circle cx="22" cy="22" r="20" fill="#e8f4ef"/>
-                <path d="M14 20h16M14 26h10" stroke="#4a8c6e" stroke-width="1.5" stroke-linecap="round"/>
-                <rect x="12" y="14" width="20" height="18" rx="2" stroke="#4a8c6e" stroke-width="1.5"/>
-              </svg>
-            </div>
-            <h4 class="feature-title">獣医師が管理する療法食</h4>
-            <p class="feature-text">療法食の購入には診察・処方が必要です。カルテと連携しているため、担当獣医師が適切な療法食かどうかを確認したうえでお届けします。</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon feature-icon--4">
-              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <circle cx="22" cy="22" r="20" fill="#e8f4ef"/>
-                <path d="M18 22c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4-4-1.8-4-4z" stroke="#4a8c6e" stroke-width="1.5"/>
-                <path d="M14 22H10M34 22h-4M22 10v4M22 30v4" stroke="#4a8c6e" stroke-width="1.5" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h4 class="feature-title">定期購入で割引</h4>
-            <p class="feature-text">毎月定期購入をお申し込みいただくと、通常価格より割引でご購入いただけます。自動でお届けするのでストックの管理も不要です。</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 取扱ブランド -->
-    <div class="brands-section">
-      <div class="container">
-        <h3 class="section-heading">取扱ブランド・商品カテゴリ</h3>
-        <div class="brands-grid">
-          <div class="brand-category">
-            <div class="brand-category-header">
-              <span class="brand-category-icon">🐕</span>
-              <h4>犬用フード</h4>
-            </div>
-            <ul class="brand-list">
-              <li>
-                <div class="brand-item">
-                  <div class="brand-logo-placeholder">Hill's</div>
-                  <div class="brand-info">
-                    <strong>ヒルズ プリスクリプション・ダイエット</strong>
-                    <span>療法食（腎臓・肝臓・心臓・消化器ほか）</span>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="brand-item">
-                  <div class="brand-logo-placeholder">Royal Canin</div>
-                  <div class="brand-info">
-                    <strong>ロイヤルカナン</strong>
-                    <span>獣医師向け療法食・ライフステージ別フード</span>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="brand-item">
-                  <div class="brand-logo-placeholder">Purina</div>
-                  <div class="brand-info">
-                    <strong>ピュリナ プロプラン Veterinary Diets</strong>
-                    <span>消化器・皮膚・体重管理ほか</span>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="brand-item">
-                  <div class="brand-logo-placeholder">Anallergén</div>
-                  <div class="brand-info">
-                    <strong>アナルジェン</strong>
-                    <span>アレルギー対応フード・加水分解フード</span>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="brand-category">
-            <div class="brand-category-header">
-              <span class="brand-category-icon">🐈</span>
-              <h4>猫用フード</h4>
-            </div>
-            <ul class="brand-list">
-              <li>
-                <div class="brand-item">
-                  <div class="brand-logo-placeholder">Hill's</div>
-                  <div class="brand-info">
-                    <strong>ヒルズ プリスクリプション・ダイエット（猫用）</strong>
-                    <span>腎臓・尿路・甲状腺・消化器ほか</span>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="brand-item">
-                  <div class="brand-logo-placeholder">Royal Canin</div>
-                  <div class="brand-info">
-                    <strong>ロイヤルカナン（猫用）</strong>
-                    <span>泌尿器ケア・体重管理・避妊去勢後ほか</span>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="brand-item">
-                  <div class="brand-logo-placeholder">Purina</div>
-                  <div class="brand-info">
-                    <strong>ピュリナ プロプラン（猫用）</strong>
-                    <span>高齢猫・腎臓・消化器ほか</span>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="brand-item">
-                  <div class="brand-logo-placeholder">N/D</div>
-                  <div class="brand-info">
-                    <strong>ヒルズ n/d</strong>
-                    <span>腫瘍性疾患対応フード</span>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="brand-category">
-            <div class="brand-category-header">
-              <span class="brand-category-icon">💊</span>
-              <h4>サプリメント・栄養補助食品</h4>
-            </div>
-            <ul class="brand-list">
-              <li>
-                <div class="brand-item">
-                  <div class="brand-logo-placeholder">Zylkene</div>
-                  <div class="brand-info">
-                    <strong>ジルケーン</strong>
-                    <span>ストレス対策・行動補助サプリ</span>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="brand-item">
-                  <div class="brand-logo-placeholder">Virbac</div>
-                  <div class="brand-info">
-                    <strong>ビルバック サプリメント</strong>
-                    <span>関節・皮膚・消化器サポート</span>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="brand-item">
-                  <div class="brand-logo-placeholder">Omega</div>
-                  <div class="brand-info">
-                    <strong>オメガ脂肪酸サプリ</strong>
-                    <span>皮膚・被毛・関節ケア</span>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="brand-item">
-                  <div class="brand-logo-placeholder">Probiotic</div>
-                  <div class="brand-info">
-                    <strong>プロバイオティクス</strong>
-                    <span>腸内環境改善・免疫サポート</span>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ご注文方法 -->
-    <div class="how-to-order">
-      <div class="container">
-        <h3 class="section-heading">ご注文の流れ</h3>
-        <div class="steps">
-          <div class="step">
-            <div class="step-number">01</div>
-            <div class="step-body">
-              <h4 class="step-title">診察・処方</h4>
-              <p class="step-text">まず当院で診察を受け、必要な場合は担当獣医師より療法食の処方を受けてください。（一般食・サプリメントは処方不要）</p>
-            </div>
-          </div>
-          <div class="step-arrow" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5 10h10M11 6l4 4-4 4" stroke="#4a8c6e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div class="step">
-            <div class="step-number">02</div>
-            <div class="step-body">
-              <h4 class="step-title">オンラインショップにアクセス</h4>
-              <p class="step-text">下のボタンよりオンラインショップへアクセスしてください。初回は会員登録が必要です。診察券番号でカルテと連携されます。</p>
-            </div>
-          </div>
-          <div class="step-arrow" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5 10h10M11 6l4 4-4 4" stroke="#4a8c6e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div class="step">
-            <div class="step-number">03</div>
-            <div class="step-body">
-              <h4 class="step-title">商品を選んでご注文</h4>
-              <p class="step-text">カートに商品を入れてお支払い情報を入力してください。クレジットカード・コンビニ払い・銀行振込に対応しています。</p>
-            </div>
-          </div>
-          <div class="step-arrow" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5 10h10M11 6l4 4-4 4" stroke="#4a8c6e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div class="step">
-            <div class="step-number">04</div>
-            <div class="step-body">
-              <h4 class="step-title">ご自宅へお届け</h4>
-              <p class="step-text">ご注文確定後、最短翌日（平日12時までのご注文の場合）に宅配便でお届けします。配送状況はメールでご確認いただけます。</p>
-            </div>
-          </div>
-        </div>
-        <div class="order-cta">
-          <a href="#" class="btn btn-primary btn-large">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 2a1 1 0 1 0 2 0m0 0h8m0 0a1 1 0 1 0 2 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            フードストアへ（オンラインショップ）
-          </a>
-          <p class="cta-note">※ 療法食のご購入には当院での診察・処方が必要です</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- フードに関するお知らせ -->
-    <div class="notice-section">
-      <div class="container">
-        <div class="notice-box">
-          <h4 class="notice-title">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <circle cx="10" cy="10" r="8" stroke="#4a8c6e" stroke-width="1.5"/>
-              <path d="M10 9v5M10 7v.5" stroke="#4a8c6e" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-            ご利用にあたってのご注意
-          </h4>
-          <ul class="notice-list">
-            <li>療法食のご購入は、当院で診察を受けた患者さまのみご利用いただけます。</li>
-            <li>初回のご注文前に、受付スタッフまたは担当獣医師にお申し付けください。</li>
-            <li>離島・一部地域への配送は別途送料がかかる場合があります。</li>
-            <li>商品の在庫状況によってはお届けまでにお時間がかかる場合があります。</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- ========== CARE STORE PANEL ========== -->
-  <section class="tab-panel" id="panel-care" role="tabpanel" aria-labelledby="tab-care" hidden>
-
-    <!-- ケアストア紹介 -->
-    <div class="store-intro store-intro--care">
-      <div class="container">
-        <div class="store-intro-grid">
-          <div class="store-intro-img">
-            <div class="img-placeholder img-placeholder--care">
-              <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M40 10c-8 0-14 6-14 14 0 5 2.5 9 6 12l8 8 8-8c3.5-3 6-7 6-12 0-8-6-14-14-14z" stroke="#4a8c6e" stroke-width="2"/>
-                <path d="M34 36c2 3 4 5 6 6 2-1 4-3 6-6" stroke="#4a8c6e" stroke-width="1.5" stroke-linecap="round"/>
-                <path d="M32 56h16M35 62h10" stroke="#4a8c6e" stroke-width="1.5" stroke-linecap="round"/>
-              </svg>
-              <p>ケアストア</p>
-            </div>
-          </div>
-          <div class="store-intro-body">
-            <h2 class="store-title">
-              <span class="store-title-en">Care Store</span>
-              ケアストア
-            </h2>
-            <p class="store-description">獣医師・動物看護師が厳選したケア用品を院内・オンラインにてご提供しています。<br>
-            デンタルケア・スキンケア・イヤーケアなど、日常のホームケアに欠かせないアイテムを幅広く取り揃えています。<br>
-            使い方がわからない場合は、スタッフまでお気軽にご相談ください。</p>
-            <div class="store-badges">
-              <span class="badge">院内販売</span>
-              <span class="badge">オンライン対応</span>
-              <span class="badge">獣医師選定</span>
-              <span class="badge">ホームケア用品</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ケア用品カテゴリ -->
-    <div class="care-categories">
-      <div class="container">
-        <h3 class="section-heading">取扱カテゴリ</h3>
-        <div class="care-grid">
-
-          <!-- デンタルケア -->
-          <div class="care-card" id="care-dental">
-            <div class="care-card-header">
-              <div class="care-card-icon">
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                  <path d="M20 8c-6 0-10 4-10 9 0 6 4 14 7 18h6c3-4 7-12 7-18 0-5-4-9-10-9z" stroke="#4a8c6e" stroke-width="1.5"/>
-                  <path d="M15 18c0 3 2 6 5 8 3-2 5-5 5-8" stroke="#4a8c6e" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <h4 class="care-card-title">デンタルケア</h4>
-            </div>
-            <ul class="care-item-list">
-              <li>
-                <span class="item-name">歯磨きジェル・歯磨き粉</span>
-                <span class="item-desc">チキン・バニラなどペットが好む香り、フッ素不使用</span>
-              </li>
-              <li>
-                <span class="item-name">歯ブラシ・フィンガーブラシ</span>
-                <span class="item-desc">ソフトブリッスル・サイズ別ラインナップ</span>
-              </li>
-              <li>
-                <span class="item-name">デンタルスプレー・洗口液</span>
-                <span class="item-desc">ブラッシングが難しい子にも使えるケアアイテム</span>
-              </li>
-              <li>
-                <span class="item-name">デンタルガム・デンタルシート</span>
-                <span class="item-desc">噛むことで歯石・口臭予防をサポート</span>
-              </li>
-            </ul>
-            <div class="care-brands">
-              <span class="brand-tag">Virbac C.E.T.</span>
-              <span class="brand-tag">ペットスマイル</span>
-              <span class="brand-tag">O.R.A.vet</span>
-            </div>
-          </div>
-
-          <!-- スキンケア -->
-          <div class="care-card" id="care-skin">
-            <div class="care-card-header">
-              <div class="care-card-icon">
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                  <ellipse cx="20" cy="20" rx="12" ry="14" stroke="#4a8c6e" stroke-width="1.5"/>
-                  <path d="M14 20c1-4 4-7 6-7s5 3 6 7" stroke="#4a8c6e" stroke-width="1.5" stroke-linecap="round"/>
-                  <path d="M20 28v4M17 30h6" stroke="#4a8c6e" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <h4 class="care-card-title">スキン・被毛ケア</h4>
-            </div>
-            <ul class="care-item-list">
-              <li>
-                <span class="item-name">低刺激シャンプー</span>
-                <span class="item-desc">アトピー・乾燥肌・脂性肌など肌状態に合わせた処方</span>
-              </li>
-              <li>
-                <span class="item-name">コンディショナー・リンス</span>
-                <span class="item-desc">被毛の艶・まとまりをサポート</span>
-              </li>
-              <li>
-                <span class="item-name">皮膚用スプレー・クリーム</span>
-                <span class="item-desc">乾燥・かゆみ・赤みのケア</span>
-              </li>
-              <li>
-                <span class="item-name">薬用シャンプー（処方品）</span>
-                <span class="item-desc">真菌・細菌性皮膚炎の補助治療用（要処方）</span>
-              </li>
-            </ul>
-            <div class="care-brands">
-              <span class="brand-tag">Virbac Episoothe</span>
-              <span class="brand-tag">Douxo S3</span>
-              <span class="brand-tag">MalAcetic</span>
-            </div>
-          </div>
-
-          <!-- イヤーケア -->
-          <div class="care-card" id="care-ear">
-            <div class="care-card-header">
-              <div class="care-card-icon">
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                  <path d="M16 8c-4 0-8 4-8 10 0 4 2 7 5 9l3 9h8l3-9c3-2 5-5 5-9 0-6-4-10-8-10-2 0-4 1-5 2-1-1-2-2-3-2z" stroke="#4a8c6e" stroke-width="1.5"/>
-                  <path d="M20 12c-2 0-4 2-4 5" stroke="#4a8c6e" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <h4 class="care-card-title">イヤーケア</h4>
-            </div>
-            <ul class="care-item-list">
-              <li>
-                <span class="item-name">耳洗浄液（イヤークリーナー）</span>
-                <span class="item-desc">耳道内の汚れ・ワックスを優しく除去</span>
-              </li>
-              <li>
-                <span class="item-name">耳掃除用コットン・ガーゼ</span>
-                <span class="item-desc">デリケートな耳周りに適したやわらかな素材</span>
-              </li>
-              <li>
-                <span class="item-name">耳毛処理パウダー</span>
-                <span class="item-desc">耳道内の毛を除去しやすくするパウダー</span>
-              </li>
-            </ul>
-            <div class="care-brands">
-              <span class="brand-tag">Virbac Epiotic</span>
-              <span class="brand-tag">MalAcetic Otic</span>
-            </div>
-          </div>
-
-          <!-- アイケア -->
-          <div class="care-card" id="care-eye">
-            <div class="care-card-header">
-              <div class="care-card-icon">
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                  <path d="M8 20s4-8 12-8 12 8 12 8-4 8-12 8-12-8-12-8z" stroke="#4a8c6e" stroke-width="1.5"/>
-                  <circle cx="20" cy="20" r="4" stroke="#4a8c6e" stroke-width="1.5"/>
-                  <circle cx="20" cy="20" r="1.5" fill="#4a8c6e"/>
-                </svg>
-              </div>
-              <h4 class="care-card-title">アイケア</h4>
-            </div>
-            <ul class="care-item-list">
-              <li>
-                <span class="item-name">点眼液（人工涙液タイプ）</span>
-                <span class="item-desc">ドライアイ・目ヤニ予防の保湿点眼液</span>
-              </li>
-              <li>
-                <span class="item-name">アイウォッシュ</span>
-                <span class="item-desc">目の周りの汚れを優しく洗い流す</span>
-              </li>
-              <li>
-                <span class="item-name">アイクリーナーシート</span>
-                <span class="item-desc">目ヤニ・涙やけを手軽に拭き取り</span>
-              </li>
-            </ul>
-            <div class="care-brands">
-              <span class="brand-tag">I-DROP</span>
-              <span class="brand-tag">Optixcare</span>
-            </div>
-          </div>
-
-          <!-- 爪・足ケア -->
-          <div class="care-card" id="care-paw">
-            <div class="care-card-header">
-              <div class="care-card-icon">
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                  <path d="M20 28c-4 0-8-4-8-8s2-6 4-8l4-4 4 4c2 2 4 4 4 8s-4 8-8 8z" stroke="#4a8c6e" stroke-width="1.5"/>
-                  <circle cx="14" cy="18" r="2" stroke="#4a8c6e" stroke-width="1.5"/>
-                  <circle cx="26" cy="18" r="2" stroke="#4a8c6e" stroke-width="1.5"/>
-                </svg>
-              </div>
-              <h4 class="care-card-title">爪・肉球ケア</h4>
-            </div>
-            <ul class="care-item-list">
-              <li>
-                <span class="item-name">爪切り（ギロチン型・ハサミ型）</span>
-                <span class="item-desc">サイズ別・猫犬兼用など豊富なバリエーション</span>
-              </li>
-              <li>
-                <span class="item-name">止血パウダー</span>
-                <span class="item-desc">爪切り時の出血を素早く止血</span>
-              </li>
-              <li>
-                <span class="item-name">肉球クリーム・バーム</span>
-                <span class="item-desc">ひび割れ・乾燥する肉球を保湿・保護</span>
-              </li>
-            </ul>
-            <div class="care-brands">
-              <span class="brand-tag">Millers Forge</span>
-              <span class="brand-tag">Musher's Secret</span>
-            </div>
-          </div>
-
-          <!-- その他ケア用品 -->
-          <div class="care-card" id="care-other">
-            <div class="care-card-header">
-              <div class="care-card-icon">
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                  <circle cx="14" cy="14" r="5" stroke="#4a8c6e" stroke-width="1.5"/>
-                  <circle cx="26" cy="14" r="5" stroke="#4a8c6e" stroke-width="1.5"/>
-                  <circle cx="14" cy="26" r="5" stroke="#4a8c6e" stroke-width="1.5"/>
-                  <circle cx="26" cy="26" r="5" stroke="#4a8c6e" stroke-width="1.5"/>
-                </svg>
-              </div>
-              <h4 class="care-card-title">その他のケア用品</h4>
-            </div>
-            <ul class="care-item-list">
-              <li>
-                <span class="item-name">エリザベスカラー・術後服</span>
-                <span class="item-desc">手術後・傷の保護に必要なアイテム</span>
-              </li>
-              <li>
-                <span class="item-name">体温計（ペット用）</span>
-                <span class="item-desc">自宅での体温管理に</span>
-              </li>
-              <li>
-                <span class="item-name">経口補水液・流動食</span>
-                <span class="item-desc">体調不良時の水分・栄養補給</span>
-              </li>
-              <li>
-                <span class="item-name">消毒液・傷ケア用品</span>
-                <span class="item-desc">軽微な傷の応急処置に</span>
-              </li>
-            </ul>
-            <div class="care-brands">
-              <span class="brand-tag">各種メーカー取扱</span>
-            </div>
-          </div>
-
-        </div><!-- /care-grid -->
-
-        <div class="order-cta">
-          <a href="#" class="btn btn-secondary btn-large">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 2a1 1 0 1 0 2 0m0 0h8m0 0a1 1 0 1 0 2 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            ケアストアへ（オンラインショップ）
-          </a>
-          <p class="cta-note">院内でもお求めいただけます。スタッフへお声がけください。</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- ケアに関するお知らせ -->
-    <div class="notice-section">
-      <div class="container">
-        <div class="notice-box">
-          <h4 class="notice-title">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <circle cx="10" cy="10" r="8" stroke="#4a8c6e" stroke-width="1.5"/>
-              <path d="M10 9v5M10 7v.5" stroke="#4a8c6e" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-            ケア用品のご利用にあたって
-          </h4>
-          <ul class="notice-list">
-            <li>一部の商品は院内のみの販売となっております。</li>
-            <li>薬用シャンプーなど処方が必要な商品は、獣医師の指示のもとご使用ください。</li>
-            <li>ケア用品の正しい使い方については、動物看護師がご説明します。お気軽にご相談ください。</li>
-            <li>在庫切れの場合はお取り寄せも承ります。受付にてお申し付けください。</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- ========== FAQ ========== -->
-  <section class="faq-section">
-    <div class="container">
-      <h2 class="section-heading">よくあるご質問</h2>
-      <div class="faq-list">
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" aria-controls="faq-1">
-            <span>療法食は診察なしで購入できますか？</span>
-            <span class="faq-icon" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </span>
-          </button>
-          <div class="faq-answer" id="faq-1" hidden>
-            <p>療法食（処方食）のご購入には、当院での診察・処方が必要です。初回は必ず診察を受けていただき、担当獣医師から処方を受けてください。2回目以降は、定期的な健康確認のもとご継続いただけます。</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" aria-controls="faq-2">
-            <span>送料はかかりますか？</span>
-            <span class="faq-icon" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </span>
-          </button>
-          <div class="faq-answer" id="faq-2" hidden>
-            <p>一定金額以上のご購入で送料無料となります。金額はオンラインショップにてご確認ください。定期購入をご利用いただいた場合、金額に関わらず送料無料となります。</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" aria-controls="faq-3">
-            <span>取り扱いのない商品はリクエストできますか？</span>
-            <span class="faq-icon" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </span>
-          </button>
-          <div class="faq-answer" id="faq-3" hidden>
-            <p>はい、お取り寄せに対応しております。まず受付または担当獣医師にご相談ください。商品・メーカーによっては対応できない場合もございますが、できる限りご要望にお応えいたします。</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" aria-controls="faq-4">
-            <span>ケア用品の使い方を教えてもらえますか？</span>
-            <span class="faq-icon" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </span>
-          </button>
-          <div class="faq-answer" id="faq-4" hidden>
-            <p>もちろんです。ご購入の際に動物看護師が使い方をご説明しています。デンタルケア・耳掃除・シャンプーなど、慣れていない方でも安心して始められるよう丁寧にサポートします。ご遠慮なくお申し付けください。</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== CONTACT CTA ========== -->
-  <section class="contact-cta">
-    <div class="container">
-      <div class="contact-cta-inner">
-        <h2 class="contact-cta-title">ご不明な点はお気軽にご相談ください</h2>
-        <p class="contact-cta-text">フード・ケア用品に関するご質問は、診察時またはお電話・お問い合わせフォームからどうぞ。</p>
-        <div class="contact-cta-btns">
-          <a href="tel:075-000-0000" class="btn btn-outline">
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M3 2h4l1.5 4-2.5 1.5c1 2.5 3 4.5 5.5 5.5L13 10.5l4 1.5V16a1 1 0 0 1-1 1C7.2 17 1 10.8 1 3a1 1 0 0 1 1-1h1z" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            お電話でのお問い合わせ
-          </a>
-          <a href="#" class="btn btn-primary">
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <rect x="1" y="3" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.3"/>
-              <path d="M1 6l8 5 8-5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
-            </svg>
-            お問い合わせフォーム
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== FOOTER ========== -->
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-logo">
-        <div class="logo-mark logo-mark--white">
-          <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <circle cx="20" cy="20" r="19" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
-            <path d="M10 22c0-5.5 4-10 10-10s10 4.5 10 10" stroke="rgba(255,255,255,0.8)" stroke-width="2" stroke-linecap="round"/>
-            <circle cx="15" cy="17" r="2" fill="rgba(255,255,255,0.8)"/>
-            <circle cx="25" cy="17" r="2" fill="rgba(255,255,255,0.8)"/>
-            <path d="M16 25c1 1.5 2.5 2 4 2s3-0.5 4-2" stroke="rgba(255,255,255,0.8)" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <div class="logo-text">
-          <span class="logo-ja" style="color:#fff;">動物病院 京都</span>
-          <span class="logo-en" style="color:rgba(255,255,255,0.6);">Animal Hospital Kyoto</span>
-        </div>
-      </div>
-
-      <div class="footer-nav">
-        <div class="footer-nav-col">
-          <h3 class="footer-nav-heading">病院について</h3>
-          <ul>
-            <li><a href="#">病院案内</a></li>
-            <li><a href="#">スタッフ紹介</a></li>
-            <li><a href="#">獣医師勤務表</a></li>
-            <li><a href="#">アクセス</a></li>
-          </ul>
-        </div>
-        <div class="footer-nav-col">
-          <h3 class="footer-nav-heading">診療について</h3>
-          <ul>
-            <li><a href="#">診療案内</a></li>
-            <li><a href="#">診療時間</a></li>
-            <li><a href="#">各院のご案内</a></li>
-            <li><a href="#">救急対応について</a></li>
-          </ul>
-        </div>
-        <div class="footer-nav-col">
-          <h3 class="footer-nav-heading">フード・ケア用品</h3>
-          <ul>
-            <li><a href="#">フードストア</a></li>
-            <li><a href="#">ケアストア</a></li>
-            <li><a href="#">取扱ブランド一覧</a></li>
-          </ul>
-        </div>
-        <div class="footer-nav-col">
-          <h3 class="footer-nav-heading">お問い合わせ</h3>
-          <ul>
-            <li><a href="#">お問い合わせフォーム</a></li>
-            <li><a href="#">よくある質問</a></li>
-            <li><a href="#">プライバシーポリシー</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p class="footer-copy">&copy; 2024 動物病院 京都. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

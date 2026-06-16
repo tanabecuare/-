@@ -1,189 +1,88 @@
 'use strict';
 
 /* ============================================================
-   Tab Switching
+   Hamburger Menu (SP)
    ============================================================ */
-(function initTabs() {
-  const tabBtns   = document.querySelectorAll('.tab-btn');
-  const tabPanels = document.querySelectorAll('.tab-panel');
+(function() {
+  var btn     = document.getElementById('hb-menu');
+  var nav     = document.querySelector('.sp-g-nav');
+  var overlay = document.querySelector('.overlay');
 
-  if (!tabBtns.length) return;
+  if (!btn || !nav) return;
 
-  tabBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const target = btn.dataset.tab;
+  function open() {
+    btn.classList.add('is-open');
+    nav.classList.add('is-open');
+    if (overlay) overlay.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    btn.setAttribute('aria-expanded', 'true');
+  }
 
-      // Update buttons
-      tabBtns.forEach(b => {
-        b.classList.toggle('active', b === btn);
-        b.setAttribute('aria-selected', b === btn ? 'true' : 'false');
-      });
+  function close() {
+    btn.classList.remove('is-open');
+    nav.classList.remove('is-open');
+    if (overlay) overlay.classList.remove('is-open');
+    document.body.style.overflow = '';
+    btn.setAttribute('aria-expanded', 'false');
+  }
 
-      // Update panels
-      tabPanels.forEach(panel => {
-        const isTarget = panel.id === `panel-${target}`;
-        panel.classList.toggle('active', isTarget);
-        if (isTarget) {
-          panel.removeAttribute('hidden');
-        } else {
-          panel.setAttribute('hidden', '');
-        }
-      });
+  btn.addEventListener('click', function() {
+    btn.classList.contains('is-open') ? close() : open();
+  });
 
-      // Trigger scroll animations for newly visible cards
-      observeCards();
+  if (overlay) overlay.addEventListener('click', close);
+
+  nav.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', close);
+  });
+})();
+
+/* ============================================================
+   Accordion (hb_menu) — SP nav sub items
+   ============================================================ */
+(function() {
+  document.querySelectorAll('.hb_menu__click').forEach(function(trigger) {
+    trigger.addEventListener('click', function(e) {
+      e.preventDefault();
+      var list = trigger.nextElementSibling;
+      if (!list) return;
+      var isOpen = list.style.display === 'block';
+      list.style.display = isOpen ? 'none' : 'block';
     });
   });
 })();
 
 /* ============================================================
-   Mobile Navigation Toggle
+   Smooth scroll for anchor links
    ============================================================ */
-(function initMobileNav() {
-  const toggle = document.getElementById('navToggle');
-  const nav    = document.getElementById('globalNav');
-
-  if (!toggle || !nav) return;
-
-  toggle.addEventListener('click', () => {
-    const isOpen = toggle.classList.toggle('is-open');
-    nav.classList.toggle('is-open', isOpen);
-    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    toggle.setAttribute('aria-label', isOpen ? 'メニューを閉じる' : 'メニューを開く');
-    document.body.style.overflow = isOpen ? 'hidden' : '';
-  });
-
-  // Close on outside click
-  document.addEventListener('click', e => {
-    if (!nav.contains(e.target) && !toggle.contains(e.target)) {
-      toggle.classList.remove('is-open');
-      nav.classList.remove('is-open');
-      toggle.setAttribute('aria-expanded', 'false');
-      toggle.setAttribute('aria-label', 'メニューを開く');
-      document.body.style.overflow = '';
-    }
-  });
-
-  // Close nav when a link inside it is clicked
-  nav.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      toggle.classList.remove('is-open');
-      nav.classList.remove('is-open');
-      toggle.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-    });
-  });
-})();
-
-/* ============================================================
-   FAQ Accordion
-   ============================================================ */
-(function initFaq() {
-  const questions = document.querySelectorAll('.faq-question');
-
-  questions.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-      const answer     = document.getElementById(btn.getAttribute('aria-controls'));
-
-      // Close all others
-      questions.forEach(other => {
-        if (other !== btn) {
-          other.setAttribute('aria-expanded', 'false');
-          const otherAnswer = document.getElementById(other.getAttribute('aria-controls'));
-          if (otherAnswer) collapseAnswer(otherAnswer);
-        }
+(function() {
+  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      var target = document.querySelector(a.getAttribute('href'));
+      if (!target) return;
+      e.preventDefault();
+      var header = document.getElementById('header');
+      var offset = header ? header.offsetHeight + 8 : 0;
+      window.scrollTo({
+        top: target.getBoundingClientRect().top + window.pageYOffset - offset,
+        behavior: 'smooth'
       });
-
-      // Toggle current
-      btn.setAttribute('aria-expanded', !isExpanded ? 'true' : 'false');
-      if (answer) {
-        if (isExpanded) {
-          collapseAnswer(answer);
-        } else {
-          expandAnswer(answer);
-        }
-      }
     });
   });
-
-  function expandAnswer(el) {
-    el.removeAttribute('hidden');
-    el.style.maxHeight = '0';
-    el.style.overflow  = 'hidden';
-    el.style.transition = 'max-height .3s ease';
-    requestAnimationFrame(() => {
-      el.style.maxHeight = el.scrollHeight + 'px';
-    });
-    el.addEventListener('transitionend', () => {
-      el.style.maxHeight = '';
-      el.style.overflow  = '';
-    }, { once: true });
-  }
-
-  function collapseAnswer(el) {
-    el.style.maxHeight  = el.scrollHeight + 'px';
-    el.style.overflow   = 'hidden';
-    el.style.transition = 'max-height .3s ease';
-    requestAnimationFrame(() => {
-      el.style.maxHeight = '0';
-    });
-    el.addEventListener('transitionend', () => {
-      el.setAttribute('hidden', '');
-      el.style.maxHeight  = '';
-      el.style.overflow   = '';
-      el.style.transition = '';
-    }, { once: true });
-  }
 })();
 
 /* ============================================================
-   Scroll Animation (Intersection Observer)
+   Footer accordion (group sections)
    ============================================================ */
-let cardObserver;
-
-function observeCards() {
-  if (cardObserver) cardObserver.disconnect();
-
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-  const cards = document.querySelectorAll(
-    '.tab-panel:not([hidden]) .feature-card, ' +
-    '.tab-panel:not([hidden]) .care-card, ' +
-    '.tab-panel:not([hidden]) .brand-category, ' +
-    '.faq-item'
-  );
-
-  cardObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        // Staggered delay
-        setTimeout(() => {
-          entry.target.classList.add('is-visible');
-        }, i * 80);
-        cardObserver.unobserve(entry.target);
-      }
+(function() {
+  document.querySelectorAll('.dt_q.arrow').forEach(function(dt) {
+    var dd = dt.nextElementSibling;
+    if (!dd) return;
+    dd.style.display = 'none';
+    dt.addEventListener('click', function() {
+      var isOpen = dd.style.display === 'block';
+      dd.style.display = isOpen ? 'none' : 'block';
+      dt.classList.toggle('active', !isOpen);
     });
-  }, { threshold: 0.1 });
-
-  cards.forEach(card => cardObserver.observe(card));
-}
-
-// Initial observe
-document.addEventListener('DOMContentLoaded', observeCards);
-
-/* ============================================================
-   Sticky header height: update CSS variable for tab offset
-   ============================================================ */
-(function updateHeaderVar() {
-  function setVar() {
-    const header = document.querySelector('.site-header');
-    if (header) {
-      document.documentElement.style.setProperty(
-        '--header-h', header.offsetHeight + 'px'
-      );
-    }
-  }
-  setVar();
-  window.addEventListener('resize', setVar);
+  });
 })();
